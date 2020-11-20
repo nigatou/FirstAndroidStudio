@@ -1,7 +1,7 @@
 reserve.md
 HELP.md
 .gradle
-build/
+app/build/
 
 ### STS ###
 .apt_generated
