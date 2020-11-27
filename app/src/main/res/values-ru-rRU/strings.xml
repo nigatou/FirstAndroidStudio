@@ -2,4 +2,15 @@
 <resources>
     <string name="app_name">НМедиа</string>
     <string name="nmedia">НМедиа!</string>
+    <string name="avatar">Avatar</string>
+    <string name="author">Нетология. Университет онлайн-профессий</string>
+    <string name="published">21 мая в 18:36</string>
+    <string name="extend">extend</string>
+    <string name="textOfThePost">Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появились курсы по дизайну, разработке, аналитике и управлению. Мы растём сами и помооаем расти студентам: от новичков до уверенных профессионалов. Но самое важное остаётся с нами: мы верим, что в каждом уже есть сила, которая заставляет хотеть больше, целиться выше, бежать быстрее. Наша миссия - помочь встать на путь роста и начать цепочку перемен -> <link>http://netolo.gy/fyb</link></string>
+    <string name="likes">likes</string>
+    <string name="NumberOfLikes">10</string>
+    <string name="share">share</string>
+    <string name="ShareNumber">5</string>
+    <string name="NumberOfViews">50</string>
+    <string name="amountOfViews">AmountOfViews</string>
 </resources>
