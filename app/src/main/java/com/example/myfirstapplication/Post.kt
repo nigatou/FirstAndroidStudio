@@ -2,8 +2,8 @@ package com.example.myfirstapplication
 
 data class Post (
     val id: Long,
-    var likes: Int = 999,
-    var shares: Int = 999,
-    var likedByMe: Boolean = false,
-    var sharedByMe: Boolean = false
+    val likes: Int = 999,
+    val shares: Int = 999,
+    val likedByMe: Boolean = false,
+    val sharedByMe: Boolean = false
 )
