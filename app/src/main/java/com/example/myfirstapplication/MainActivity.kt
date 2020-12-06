@@ -2,6 +2,7 @@ package com.example.myfirstapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
 import com.example.myfirstapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

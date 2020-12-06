@@ -1,5 +1,6 @@
 package com.example.myfirstapplication
 
+import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 
@@ -17,17 +18,19 @@ class PostRepositoryInMemoryImpl: PostRepository {
 
     override fun get(): LiveData<Post> = data
 
-    override fun like() {
+    override fun like(): View.OnClickListener? {
         post = if (post.likedByMe) {
             post.copy(likes = post.likes - 1, likedByMe = !post.likedByMe)
         } else {
             post.copy(likes = post.likes + 1, likedByMe = !post.likedByMe)
         }
         data.value = post
+        return null
     }
 
-    override fun share() {
+    override fun share(): View.OnClickListener? {
         post = post.copy(shares = post.shares + 1, sharedByMe = true)
         data.value = post
+        return null
     }
 }
