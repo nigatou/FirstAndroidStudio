@@ -6,7 +6,6 @@ import androidx.activity.viewModels
 import com.example.myfirstapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
@@ -14,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         val viewModel: PostViewModel by viewModels()
 
-        viewModel.data.observe(this, {post ->
+        viewModel.data.observe(this, { post ->
             with(binding) {
                 if (post.likedByMe) {
                     like.setImageResource(R.drawable.ic_baseline_favorite_24)
@@ -29,11 +28,11 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
-        binding.like.setOnClickListener(
+        binding.like.setOnClickListener {
             viewModel.like()
-        )
-        binding.share.setOnClickListener(
+        }
+        binding.share.setOnClickListener {
             viewModel.share()
-        )
+        }
     }
 }
