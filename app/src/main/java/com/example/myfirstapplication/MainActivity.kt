@@ -13,26 +13,14 @@ class MainActivity : AppCompatActivity() {
 
         val viewModel: PostViewModel by viewModels()
 
-        viewModel.data.observe(this, { post ->
-            with(binding) {
-                if (post.likedByMe) {
-                    like.setImageResource(R.drawable.ic_baseline_favorite_24)
-                    numberOfLikes.text = ConvertNumberService.convertNumber(post.likes)
-                } else {
-                    like.setImageResource(R.drawable.ic_baseline_favorite_border_24)
-                    numberOfLikes.text = ConvertNumberService.convertNumber(post.likes)
-                }
-                if (post.sharedByMe) {
-                    share.setImageResource(R.drawable.ic_baseline_shared_24)
-                    numberOfShares.text = ConvertNumberService.convertNumber(post.shares)
-                }
-            }
+        val adapter = PostsAdapter {
+            viewModel.likeById(it.id)
+            viewModel.shareById(it.id)
+        }
+
+        binding.list.adapter = adapter
+        viewModel.data.observe(this, { posts ->
+            adapter.submitList(posts)
         })
-        binding.like.setOnClickListener {
-            viewModel.like()
-        }
-        binding.share.setOnClickListener {
-            viewModel.share()
-        }
     }
 }
