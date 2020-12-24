@@ -13,4 +13,5 @@
     <string name="ShareNumber">5</string>
     <string name="NumberOfViews">50</string>
     <string name="amountOfViews">AmountOfViews</string>
+    <string name="Remove">Удалить</string>
 </resources>
