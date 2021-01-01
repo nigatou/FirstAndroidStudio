@@ -14,4 +14,8 @@
     <string name="NumberOfViews">50</string>
     <string name="amountOfViews">AmountOfViews</string>
     <string name="Remove">Удалить</string>
+    <string name="post_text">Текст поста</string>
+    <string name="save">Save</string>
+    <string name="error_empty_content">Ошибка: Пустой Контент</string>
+    <string name="edit">Изменить</string>
 </resources>
