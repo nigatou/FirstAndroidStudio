@@ -22,15 +22,18 @@ class PostViewModel : ViewModel() {
     fun shareById(id: Long) = repository.shareById(id)
     fun removeById(id: Long) = repository.removeById(id)
 
-    fun save() {
-        edited.value?.let {
-            repository.save(it)
+    fun save(cancel: Boolean) {
+        if (!cancel) {
+            edited.value?.let {
+                repository.save(it)
+            }
         }
         edited.value = empty
     }
 
     fun edit(post: Post) {
         edited.value = post
+
     }
 
     fun changeContent(content: String) {

@@ -3,73 +3,67 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="0dp"
-    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="@id/content"
+    app:layout_constraintTop_toTopOf="@id/list"
     tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toTopOf="@id/editingMode"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp"
         tools:listitem="@layout/card_post" />
 
     <TextView
         android:id="@+id/editingMode"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/back"
         android:hint="@string/editing_mode"
         android:padding="12dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/content"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/cancel"
-        app:layout_constraintTop_toBottomOf="@id/list"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/cancel"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/back"
         android:contentDescription="@string/cancel"
-        app:srcCompat="@drawable/ic_baseline_clear_24"
         android:padding="10dp"
-        android:background="@android:color/transparent"
-        app:layout_constraintStart_toEndOf="@id/editingMode"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/list"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/save"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/editingMode"
+        app:srcCompat="@drawable/ic_baseline_clear_24" />
 
     <EditText
         android:id="@+id/content"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
+        android:background="@drawable/back"
         android:hint="@string/post_text"
         android:importantForAutofill="no"
         android:inputType="textMultiLine"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/save"
-        app:layout_constraintTop_toBottomOf="@id/editingMode"
-        />
+        app:layout_constraintEnd_toStartOf="@id/save" />
 
     <ImageButton
         android:id="@+id/save"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
+        android:layout_height="0dp"
+        android:background="@drawable/back"
         android:contentDescription="@string/save"
-        app:srcCompat="@drawable/ic_baseline_check_circle_outline_24"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cancel"
         app:layout_constraintStart_toEndOf="@id/content"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_check_circle_outline_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

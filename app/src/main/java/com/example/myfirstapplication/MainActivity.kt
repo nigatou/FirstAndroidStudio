@@ -3,6 +3,7 @@ package com.example.myfirstapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import com.example.myfirstapplication.adapter.OnInteractionListener
@@ -30,6 +31,8 @@ class MainActivity : AppCompatActivity() {
 
             override fun onEdit(post: Post) {
                 viewModel.edit(post)
+                binding.editingMode.visibility = View.VISIBLE
+                binding.cancel.visibility = View.VISIBLE
             }
 
             override fun onRemove(post: Post) {
@@ -54,12 +57,24 @@ class MainActivity : AppCompatActivity() {
                     return@setOnClickListener
                 }
 
+                binding.editingMode.visibility = View.GONE
+                binding.cancel.visibility = View.GONE
+
                 viewModel.changeContent(text.toString())
-                viewModel.save()
+                viewModel.save(false)
 
                 setText("")
                 clearFocus()
                 AndroidUtils.hideKeyboard(this)
+            }
+        }
+
+        binding.cancel.setOnClickListener {
+            with(binding.content) {
+                setText("")
+                binding.editingMode.visibility = View.GONE
+                binding.cancel.visibility = View.GONE
+                viewModel.save(true)
             }
         }
 
