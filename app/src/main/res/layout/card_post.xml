@@ -35,7 +35,8 @@
         app:layout_constraintBottom_toTopOf="@id/published"
         app:layout_constraintStart_toEndOf="@id/imageView"
         app:layout_constraintEnd_toStartOf="@id/imageButton"
-        app:layout_constraintTop_toTopOf="@id/imageView" />
+        app:layout_constraintTop_toTopOf="@id/imageView"
+        android:layout_marginEnd="20dp"/>
 
     <TextView
         android:id="@+id/published"
@@ -47,20 +48,19 @@
         app:layout_constraintStart_toEndOf="@id/imageView"
         app:layout_constraintTop_toBottomOf="@id/author" />
 
-    <ImageButton
+    <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/imageButton"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="22dp"
         android:layout_marginEnd="20dp"
-        android:background="@android:color/transparent"
         android:contentDescription="@string/extend"
         app:layout_constraintBottom_toTopOf="@id/published"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/imageView"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_baseline_more_vert_24" />
+        android:button="@drawable/ic_baseline_more_vert_24"/>
 
     <TextView
         android:id="@+id/content"
@@ -77,48 +77,33 @@
         app:layout_constraintTop_toTopOf="parent"
         />
 
-    <ImageButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/like"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:background="@android:color/transparent"
+        android:layout_marginStart="20dp"
+        android:checkable="true"
+        android:contentDescription="@string/likes"
+        app:icon="@drawable/ic_like_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/content"
-        app:srcCompat="@drawable/ic_baseline_favorite_border_24"
-        android:contentDescription="@string/likes" />
+        tools:checked="@sample/posts.json/data/likedByMe"
+        tools:text="@sample/posts.json/data/likes"
+        style="@style/Widget.AppTheme.LikeCheckBox"/>
 
-    <TextView
-        android:id="@+id/numberOfLikes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="5dp"
-        app:layout_constraintTop_toBottomOf="@id/content"
-        app:layout_constraintLeft_toRightOf="@id/like"
-        android:text="@string/NumberOfLikes" />
-
-    <ImageButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/share"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="30dp"
-        android:background="@android:color/transparent"
+        android:layout_marginStart="20dp"
+        android:checkable="true"
         android:contentDescription="@string/share"
-        app:layout_constraintStart_toStartOf="@id/numberOfLikes"
+        app:icon="@drawable/ic_share_24"
+        app:layout_constraintStart_toEndOf="@id/like"
         app:layout_constraintTop_toBottomOf="@id/content"
-        app:srcCompat="@drawable/ic_baseline_share_24" />
-
-    <TextView
-        android:id="@+id/numberOfShares"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="5dp"
-        app:layout_constraintTop_toBottomOf="@id/content"
-        app:layout_constraintLeft_toRightOf="@id/share"
-        android:text="@string/ShareNumber" />
+        tools:checked="@sample/posts.json/data/sharedByMe"
+        tools:text="@sample/posts.json/data/shares"
+        style="@style/Widget.AppTheme.ShareCheckBox"/>
 
     <ImageView
         android:id="@+id/imageView2"
@@ -135,7 +120,8 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="22dp"
         android:text="@string/NumberOfViews"
         app:layout_constraintEnd_toEndOf="@id/content"
         app:layout_constraintTop_toBottomOf="@id/content" />

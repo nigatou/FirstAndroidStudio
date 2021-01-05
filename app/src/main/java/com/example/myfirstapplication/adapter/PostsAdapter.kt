@@ -6,13 +6,6 @@ import androidx.recyclerview.widget.ListAdapter
 import com.example.myfirstapplication.post.Post
 import com.example.myfirstapplication.databinding.CardPostBinding
 
-interface OnInteractionListener {
-    fun onLike(post: Post) {}
-    fun onShare(post: Post) {}
-    fun onEdit(post: Post) {}
-    fun onRemove(post: Post) {}
-}
-
 class PostsAdapter(
         private val onInteractionListener: OnInteractionListener
 ) : ListAdapter<Post, PostViewHolder>(PostDiffCallback()) {

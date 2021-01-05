@@ -13,20 +13,17 @@ class PostViewHolder(
     fun bind(post: Post) {
         binding.apply {
             content.text = post.content
-            numberOfLikes.text = post.likes
-            numberOfShares.text = post.shares
+            like.text = post.likes
+            share.text = post.shares
+            like.isChecked = post.likedByMe
+            share.isChecked = post.sharedByMe
 
-            like.setImageResource(
-                    if (post.likedByMe) R.drawable.ic_baseline_favorite_24 else R.drawable.ic_baseline_favorite_border_24
-            )
+
             like.setOnClickListener{
                 onInteractionListener.onLike(post)
             }
 
-            share.setImageResource(
-                    if (post.sharedByMe) R.drawable.ic_baseline_shared_24 else R.drawable.ic_baseline_share_24
-            )
-            like.setOnClickListener{
+            share.setOnClickListener{
                 onInteractionListener.onShare(post)
             }
 

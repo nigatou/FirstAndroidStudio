@@ -11,9 +11,13 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/editingMode"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
         tools:listitem="@layout/card_post" />
 
     <TextView
@@ -52,7 +56,7 @@
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/save" />
+        app:layout_constraintEnd_toStartOf="@id/save"/>
 
     <ImageButton
         android:id="@+id/save"
@@ -64,6 +68,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_baseline_check_circle_outline_24" />
+        app:srcCompat="@drawable/ic_baseline_check_circle_outline_24"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
