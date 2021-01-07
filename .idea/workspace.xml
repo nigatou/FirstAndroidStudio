@@ -42,13 +42,15 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sampledata/posts.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/sampledata/posts.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/adapter/PostViewHolder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/adapter/PostViewHolder.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/adapter/PostsAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/adapter/PostsAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/post/Post.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/post/Post.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/post/PostRepositoryInMemoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/post/PostRepositoryInMemoryImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/post/PostViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/post/PostViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/card_post.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/card_post.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ru-rRU/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ru-rRU/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -441,26 +443,27 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="751" y="240" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1607118327254" />
-    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606554306255">
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610008749143">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1606554306255" />
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610008749143" />
     <state x="725" y="316" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1609340919368">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="725" y="316" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1609340919368" />
-    <state x="92" y="92" width="1736" height="866" key="AVDManager" timestamp="1609510794341">
+    <state x="92" y="92" width="1736" height="866" key="AVDManager" timestamp="1610009276579">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="92" y="92" width="1736" height="866" key="AVDManager/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1609510794341" />
+    <state x="92" y="92" width="1736" height="866" key="AVDManager/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610009276579" />
+    <state x="2012" y="92" width="1736" height="866" key="AVDManager/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1609973901611" />
     <state x="540" y="279" key="AndroidCreateResourceDirectoryDialog" timestamp="1609340836450">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="540" y="279" key="AndroidCreateResourceDirectoryDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1609340836450" />
-    <state x="540" y="279" key="AndroidCreateResourceFileDialog" timestamp="1609835695430">
+    <state x="540" y="279" key="AndroidCreateResourceFileDialog" timestamp="1609996820531">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="540" y="279" key="AndroidCreateResourceFileDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1609835695430" />
+    <state x="540" y="279" key="AndroidCreateResourceFileDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1609996820531" />
     <state x="804" y="310" key="AndroidCreateXmlResourceDialog" timestamp="1609496639128">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -473,26 +476,26 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1606421928308" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1609615575441">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1610016494882">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1609615575441" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1606639177152" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1609615575441">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610016494882" />
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1609973903104" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1610016494882">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1609615575441" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1606639177151" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1609615575440">
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610016494882" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1609973903104" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1610016494882">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1609615575440" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1606639177151" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1609615575441">
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610016494882" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1609973903104" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1610016494882">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1609615575441" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1606639177151" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610016494882" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1609973903104" />
     <state width="1877" height="344" key="GridCell.Tab.1.bottom" timestamp="1606691414119">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -513,10 +516,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="733" y="227" key="RollbackChangesDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1609840165989" />
-    <state x="616" y="243" width="672" height="677" key="run.anything.popup" timestamp="1608768196700">
+    <state x="616" y="243" width="672" height="677" key="run.anything.popup" timestamp="1610012606639">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="616" y="243" width="672" height="677" key="run.anything.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1608768196700" />
+    <state x="616" y="243" width="672" height="677" key="run.anything.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610012606639" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1609834626126">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

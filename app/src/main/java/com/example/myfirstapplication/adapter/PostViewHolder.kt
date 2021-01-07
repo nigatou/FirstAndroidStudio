@@ -1,5 +1,6 @@
 package com.example.myfirstapplication.adapter
 
+import android.util.Log
 import android.widget.PopupMenu
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myfirstapplication.*
@@ -13,11 +14,11 @@ class PostViewHolder(
     fun bind(post: Post) {
         binding.apply {
             content.text = post.content
-            like.text = post.likes
-            share.text = post.shares
+            like.text = ConvertNumberService.convertNumber(post.likes)
+            share.text = ConvertNumberService.convertNumber(post.shares)
             like.isChecked = post.likedByMe
             share.isChecked = post.sharedByMe
-
+            view.text = ConvertNumberService.convertNumber(post.views)
 
             like.setOnClickListener{
                 onInteractionListener.onLike(post)

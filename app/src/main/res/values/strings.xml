@@ -18,5 +18,6 @@
     <string name="error_empty_content">Error: Empty Content</string>
     <string name="edit">Edit</string>
     <string name="cancel">Cancel</string>
+    <string name="view">View</string>
     <string name="editing_mode">Editing mode</string>
 </resources>

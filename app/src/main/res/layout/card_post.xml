@@ -105,24 +105,16 @@
         tools:text="@sample/posts.json/data/shares"
         style="@style/Widget.AppTheme.ShareCheckBox"/>
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="5dp"
-        app:layout_constraintEnd_toStartOf="@id/textView6"
-        app:layout_constraintTop_toBottomOf="@id/content"
-        app:srcCompat="@drawable/ic_baseline_remove_red_eye_24"
-        android:contentDescription="@string/amountOfViews" />
-
-    <TextView
-        android:id="@+id/textView6"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
-        android:layout_marginTop="22dp"
-        android:text="@string/NumberOfViews"
-        app:layout_constraintEnd_toEndOf="@id/content"
-        app:layout_constraintTop_toBottomOf="@id/content" />
+        android:clickable="false"
+        android:contentDescription="@string/view"
+        app:icon="@drawable/ic_baseline_remove_red_eye_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/content"
+        tools:text="@sample/posts.json/data/views"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

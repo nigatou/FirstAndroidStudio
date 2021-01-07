@@ -19,5 +19,6 @@
     <string name="error_empty_content">Ошибка: Пустой Контент</string>
     <string name="edit">Изменить</string>
     <string name="cancel">Cancel</string>
+    <string name="view">View</string>
     <string name="editing_mode">Editing mode</string>
 </resources>

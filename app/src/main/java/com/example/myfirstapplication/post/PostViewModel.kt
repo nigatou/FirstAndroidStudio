@@ -6,10 +6,11 @@ import androidx.lifecycle.ViewModel
 private val empty = Post(
         id=0,
         content = "",
-        likes = "",
-        shares = "",
+        likes = 0,
+        shares = 0,
         sharedByMe = false,
-        likedByMe = false
+        likedByMe = false,
+        views = 0,
 )
 
 class PostViewModel : ViewModel() {
