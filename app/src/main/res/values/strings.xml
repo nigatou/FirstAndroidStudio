@@ -20,4 +20,12 @@
     <string name="cancel">Cancel</string>
     <string name="view">View</string>
     <string name="editing_mode">Editing mode</string>
+    <string name="chooser_share_post">Choose share post</string>
+    <string name="blankPage">This is a blank page</string>
+    <string name="createpost">createPost</string>
+    <string name="image">image</string>
+    <string name="link">https://www.google.com</string>
+    <string name="addpost">addPost</string>
+    <string name="playvideo">playVideo</string>
+    <string name="video_link">Video Link</string>
 </resources>

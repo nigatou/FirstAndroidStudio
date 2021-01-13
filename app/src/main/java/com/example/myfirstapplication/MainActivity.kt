@@ -1,10 +1,10 @@
 package com.example.myfirstapplication
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.TextUtils
-import android.view.View
-import android.widget.Toast
+import android.util.Log
 import androidx.activity.viewModels
 import com.example.myfirstapplication.adapter.OnInteractionListener
 import com.example.myfirstapplication.adapter.PostsAdapter
@@ -14,29 +14,106 @@ import com.example.myfirstapplication.post.Post
 
 class MainActivity : AppCompatActivity() {
 
+    val viewModel: PostViewModel by viewModels()
+    var editablePost = Post(
+            id=0L,
+            content = "",
+            likes = 0,
+            shares = 0,
+            sharedByMe = false,
+            likedByMe = false,
+            views = 0,
+            video = ""
+    )
+
+    private fun addPost() {
+        val intent = Intent(applicationContext, NewPostActivity::class.java)
+        startActivityForResult(intent, 1)
+    }
+
+    private fun editPost(post: Post) {
+        val intent = Intent(applicationContext, NewPostActivity::class.java)
+        intent.putExtra("edit", true)
+        intent.putExtra("postId", post.id)
+        intent.putExtra("postContent", post.content)
+        intent.putExtra("postVideo", post.video)
+
+        editablePost = post
+
+        startActivityForResult(intent, 1)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == 1) {
+            when (resultCode) {
+                0 -> {
+                    Log.d("Result Code:", "0")
+                }
+                1 -> {
+                    var postContent = ""
+                    var postVideo = ""
+                    data?.getStringExtra("postContent")?.let {
+                        postContent = it
+                    }
+                    data?.getStringExtra("postVideo")?.let {
+                        postVideo = it
+                    }
+                    viewModel.changeContent(postContent, postVideo)
+                    viewModel.save()
+                }
+                2 -> {
+                    var postContent = ""
+                    var postVideo = ""
+                    data?.getStringExtra("postContent")?.let {
+                        postContent = it
+                    }
+                    data?.getStringExtra("postVideo")?.let {
+                        postVideo = it
+                    }
+
+                    editablePost = editablePost.copy(content = postContent, video = postVideo)
+
+                    viewModel.edit(editablePost)
+                    viewModel.save()
+                }
+            }
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val viewModel: PostViewModel by viewModels()
-
         val adapter = PostsAdapter(object : OnInteractionListener {
             override fun onLike(post: Post) {
                 viewModel.likeById(post.id)
             }
+
             override fun onShare(post: Post) {
                 viewModel.shareById(post.id)
+                val intent = Intent().apply {
+                    action = Intent.ACTION_SEND
+                    putExtra(Intent.EXTRA_TEXT, post.content)
+                    type = "text/plain"
+                }
+                val shareIntent = Intent.createChooser(intent, getString(R.string.chooser_share_post))
+                startActivity(shareIntent)
             }
 
             override fun onEdit(post: Post) {
-                viewModel.edit(post)
-                binding.editingMode.visibility = View.VISIBLE
-                binding.cancel.visibility = View.VISIBLE
+                editPost(post)
             }
 
             override fun onRemove(post: Post) {
                 viewModel.removeById(post.id)
+            }
+
+            override fun onPlayVideo(post: Post) {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(post.video))
+                startActivity(intent)
             }
         })
 
@@ -46,46 +123,8 @@ class MainActivity : AppCompatActivity() {
             adapter.submitList(posts)
         })
 
-        binding.save.setOnClickListener {
-            with(binding.content) {
-                if (TextUtils.isEmpty(text)) {
-                    Toast.makeText(
-                            this@MainActivity,
-                            context.getString(R.string.error_empty_content),
-                            Toast.LENGTH_SHORT
-                    ).show()
-                    return@setOnClickListener
-                }
-
-                binding.editingMode.visibility = View.GONE
-                binding.cancel.visibility = View.GONE
-
-                viewModel.changeContent(text.toString())
-                viewModel.save(false)
-
-                setText("")
-                clearFocus()
-                AndroidUtils.hideKeyboard(this)
-            }
+        binding.fab.setOnClickListener {
+            addPost()
         }
-
-        binding.cancel.setOnClickListener {
-            with(binding.content) {
-                setText("")
-                binding.editingMode.visibility = View.GONE
-                binding.cancel.visibility = View.GONE
-                viewModel.save(true)
-            }
-        }
-
-        viewModel.edited.observe(this, { post ->
-            if (post.id == 0L) {
-                return@observe
-            }
-            with(binding.content) {
-                requestFocus()
-                setText(post.content)
-            }
-        })
     }
 }

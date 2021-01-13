@@ -1,11 +1,11 @@
 package com.example.myfirstapplication.adapter
 
-import android.util.Log
+import android.view.View
 import android.widget.PopupMenu
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myfirstapplication.*
-import com.example.myfirstapplication.post.Post
 import com.example.myfirstapplication.databinding.CardPostBinding
+import com.example.myfirstapplication.post.Post
 
 class PostViewHolder(
         private val binding: CardPostBinding,
@@ -19,6 +19,16 @@ class PostViewHolder(
             like.isChecked = post.likedByMe
             share.isChecked = post.sharedByMe
             view.text = ConvertNumberService.convertNumber(post.views)
+            if (post.video != "") {
+                contentVideo.visibility = View.VISIBLE
+                playVideo.visibility = View.VISIBLE
+                contentLink.visibility = View.VISIBLE
+                contentLink.text = post.video
+
+                playVideo.setOnClickListener {
+                    onInteractionListener.onPlayVideo(post)
+                }
+            }
 
             like.setOnClickListener{
                 onInteractionListener.onLike(post)

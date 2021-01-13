@@ -64,7 +64,7 @@
 
     <TextView
         android:id="@+id/content"
-        android:layout_width="412dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="90dp"
         android:autoLink="web"
@@ -77,6 +77,50 @@
         app:layout_constraintTop_toTopOf="parent"
         />
 
+    <ImageButton
+        android:id="@+id/contentVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/image"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/background"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/content"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/playVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/content"
+        app:layout_constraintBottom_toTopOf="@id/contentLink"
+        android:src="@drawable/ic_baseline_play_arrow_24"
+        android:contentDescription="@string/playvideo" />
+
+    <TextView
+        android:id="@+id/contentLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:text="@string/link"
+        android:textColorLink="#5CCBCF"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contentVideo"
+        />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/like"
         android:layout_width="wrap_content"
@@ -86,10 +130,11 @@
         android:contentDescription="@string/likes"
         app:icon="@drawable/ic_like_24"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/content"
+        app:layout_constraintTop_toBottomOf="@id/contentLink"
         tools:checked="@sample/posts.json/data/likedByMe"
         tools:text="@sample/posts.json/data/likes"
-        style="@style/Widget.AppTheme.LikeCheckBox"/>
+        style="@style/Widget.AppTheme.LikeCheckBox"
+        />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/share"
@@ -100,7 +145,7 @@
         android:contentDescription="@string/share"
         app:icon="@drawable/ic_share_24"
         app:layout_constraintStart_toEndOf="@id/like"
-        app:layout_constraintTop_toBottomOf="@id/content"
+        app:layout_constraintTop_toBottomOf="@id/contentLink"
         tools:checked="@sample/posts.json/data/sharedByMe"
         tools:text="@sample/posts.json/data/shares"
         style="@style/Widget.AppTheme.ShareCheckBox"/>
@@ -114,7 +159,7 @@
         android:contentDescription="@string/view"
         app:icon="@drawable/ic_baseline_remove_red_eye_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/content"
+        app:layout_constraintTop_toBottomOf="@id/contentLink"
         tools:text="@sample/posts.json/data/views"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
