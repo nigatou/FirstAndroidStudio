@@ -15,6 +15,7 @@ import com.example.myfirstapplication.post.Post
 class MainActivity : AppCompatActivity() {
 
     val viewModel: PostViewModel by viewModels()
+
     var editablePost = Post(
             id=0L,
             content = "",
@@ -25,6 +26,8 @@ class MainActivity : AppCompatActivity() {
             views = 0,
             video = ""
     )
+
+    private val request = RequestCode()
 
     private fun addPost() {
         val intent = Intent(applicationContext, NewPostActivity::class.java)
@@ -48,10 +51,10 @@ class MainActivity : AppCompatActivity() {
 
         if (requestCode == 1) {
             when (resultCode) {
-                0 -> {
+                request.empty -> {
                     Log.d("Result Code:", "0")
                 }
-                1 -> {
+                request.add -> {
                     var postContent = ""
                     var postVideo = ""
                     data?.getStringExtra("postContent")?.let {
@@ -63,7 +66,7 @@ class MainActivity : AppCompatActivity() {
                     viewModel.changeContent(postContent, postVideo)
                     viewModel.save()
                 }
-                2 -> {
+                request.edit -> {
                     var postContent = ""
                     var postVideo = ""
                     data?.getStringExtra("postContent")?.let {

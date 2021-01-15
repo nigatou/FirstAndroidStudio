@@ -15,6 +15,8 @@ class NewPostActivity : AppCompatActivity() {
         val binding = ActivityNewPostBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val request = RequestCode()
+
         binding.apply {
             val extras = intent.extras
 
@@ -48,18 +50,18 @@ class NewPostActivity : AppCompatActivity() {
 
                 when {
                     TextUtils.isEmpty(content.text) -> {
-                        setResult(0, intent)
+                        setResult(request.empty, intent)
                     }
                     extras == null -> {
                         intent.putExtra("postContent", content.text.toString())
                         intent.putExtra("postVideo", link.text.toString())
-                        setResult(1, intent)
+                        setResult(request.add, intent)
                     }
                     extras.getBoolean("edit") -> {
                         intent.putExtra("postId", extras.getLong("postId").toInt())
                         intent.putExtra("postContent", content.text.toString())
                         intent.putExtra("postVideo", link.text.toString())
-                        setResult(2, intent)
+                        setResult(request.edit, intent)
                     }
                 }
                 finish()
