@@ -7,7 +7,7 @@ class PostRepositoryInMemoryImpl: PostRepository {
 
     private var posts = listOf(
         Post(
-            id = 1,
+            id = 1L,
             content = "Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появились курсы по дизайну, разработке, аналитике и управлению. Мы растём сами и помооаем расти студентам: от новичков до уверенных профессионалов. Но самое важное остаётся с нами: мы верим, что в каждом уже есть сила, которая заставляет хотеть больше, целиться выше, бежать быстрее. Наша миссия - помочь встать на путь роста и начать цепочку перемен -> http://netolo.gy/fyb",
             likes = 800,
             shares = 998,
@@ -17,7 +17,7 @@ class PostRepositoryInMemoryImpl: PostRepository {
             video = ""
         ),
         Post(
-            id = 2,
+            id = 2L,
             content = "Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появились курсы по дизайну, разработке, аналитике и управлению. Мы растём сами и помооаем расти студентам: от новичков до уверенных профессионалов. Но самое важное остаётся с нами: мы верим, что в каждом уже есть сила, которая заставляет хотеть больше, целиться выше, бежать быстрее. Наша миссия - помочь встать на путь роста и начать цепочку перемен -> http://netolo.gy/fyb",
                 likes = 800,
                 shares = 800,
@@ -27,6 +27,8 @@ class PostRepositoryInMemoryImpl: PostRepository {
                 video = "http://www.google.com"
         )
     )
+
+    private var nextId = 3L
 
     private val data = MutableLiveData(posts)
 
@@ -71,7 +73,7 @@ class PostRepositoryInMemoryImpl: PostRepository {
         if (post.id == 0L) {
             posts = listOf(
                     post.copy(
-                            id = (Math.random() * 999999).toLong(),
+                            id = nextId++,
                             likes = 0,
                             shares = 0,
                             likedByMe = false,
