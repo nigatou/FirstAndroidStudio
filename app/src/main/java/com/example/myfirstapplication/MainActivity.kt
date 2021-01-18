@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
     val viewModel: PostViewModel by viewModels()
 
-    var editablePost = Post(
+    private var editablePost = Post(
             id=0L,
             content = "",
             likes = 0,
@@ -115,6 +115,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onPlayVideo(post: Post) {
+                viewModel.playVideo(post)
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse(post.video))
                 startActivity(intent)
             }

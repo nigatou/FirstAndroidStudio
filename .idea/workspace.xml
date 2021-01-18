@@ -30,9 +30,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="accc4b00-0b9a-470c-b355-69d251ad3618" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Andrei.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Andrei.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/MyFirstApplication.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/MyFirstApplication.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sampledata/posts.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/post/PostRepositoryInMemoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/post/PostRepositoryInMemoryImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/post/PostRepositoryInMemoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/post/PostRepositoryFileImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/post/PostViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/post/PostViewModel.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +185,7 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-01-01T14:08:24.208Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="memory.settings" />
@@ -178,6 +197,7 @@
       <recent name="com.example.myfirstapplication.Adapter" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Things\IT\Kotlin\app\src\main\java\com\example\myfirstapplication" />
       <recent name="E:\Things\IT\Kotlin\app\src\main\res\drawable" />
       <recent name="E:\Things\IT\Kotlin\app\src\main\res\menu" />
       <recent name="E:\Things\IT\Kotlin" />
@@ -189,7 +209,7 @@
       <command value="gradlew clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Android App.app">
+  <component name="RunManager" selected="Android App.MainActivity">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -389,8 +409,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Kotlin:app [clean]" />
         <item itemvalue="Android App.MainActivity" />
+        <item itemvalue="Gradle.Kotlin:app [clean]" />
         <item itemvalue="Gradle.Kotlin:app [build]" />
         <item itemvalue="Gradle.Kotlin:app [installDebug]" />
         <item itemvalue="Gradle.Kotlin:app [installDebugAndroidTest]" />
@@ -423,10 +443,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="477" y="271" key="#PSD" timestamp="1605737077204">
+    <state x="477" y="271" key="#PSD" timestamp="1610951924663">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="477" y="271" key="#PSD/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605737077204" />
+    <state x="477" y="271" key="#PSD/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610951924663" />
     <state x="751" y="240" key="#com.intellij.ide.util.MemberChooser" timestamp="1610397383932">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -464,25 +484,25 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610374218202" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1610575396639">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1610975274685">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610575396639" />
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610975274685" />
     <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1609973903104" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1610575396639">
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1610975274685">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610575396639" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610975274685" />
     <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1609973903104" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1610575396639">
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1610975274685">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610575396639" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610975274685" />
     <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1609973903104" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1610575396639">
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1610975274685">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610575396639" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610975274685" />
     <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1609973903104" />
     <state width="1877" height="344" key="GridCell.Tab.1.bottom" timestamp="1606691414119">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -504,10 +524,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="733" y="227" key="RollbackChangesDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1609840165989" />
-    <state x="54" y="594" width="1543" height="1037" key="dock-window-1" timestamp="1610476305097">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="1920" y="0" width="1526" height="1037" maximized="true" key="dock-window-1" timestamp="1610951707280">
+      <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state x="54" y="594" width="1543" height="1037" key="dock-window-1/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610476305097" />
+    <state x="1920" y="0" width="1526" height="1037" maximized="true" key="dock-window-1/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610951707280" />
     <state x="2016" y="0" width="1562" height="1037" maximized="true" key="dock-window-2" timestamp="1610398965217">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
@@ -516,9 +536,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" width="672" height="677" key="run.anything.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610012606639" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1610575331351">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1610974963776">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610575331351" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610974963776" />
   </component>
 </project>
