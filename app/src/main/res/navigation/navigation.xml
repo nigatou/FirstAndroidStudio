@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/recyclerView">
+
+    <fragment
+        android:id="@+id/recyclerView"
+        android:name="com.example.myfirstapplication.views.RecyclerView"
+        android:label="recycler_view"
+        tools:layout="@layout/recycler_view">
+        <action
+            android:id="@+id/action_recyclerView_to_postView"
+            app:destination="@id/postView" />
+        <action
+            android:id="@+id/action_recyclerView_to_newPostView"
+            app:destination="@id/newPostView" />
+    </fragment>
+    <fragment
+        android:id="@+id/newPostView"
+        android:name="com.example.myfirstapplication.views.NewPostView"
+        android:label="new_post"
+        tools:layout="@layout/new_post" />
+    <fragment
+        android:id="@+id/postView"
+        android:name="com.example.myfirstapplication.views.PostView"
+        android:label="card_post"
+        tools:layout="@layout/card_post">
+        <action
+            android:id="@+id/action_postView_to_newPostView"
+            app:destination="@id/newPostView" />
+    </fragment>
+</navigation>

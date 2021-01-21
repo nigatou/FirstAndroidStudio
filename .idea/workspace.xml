@@ -42,23 +42,33 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Andrei.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Andrei.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_1_0_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/MyFirstApplication.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/MyFirstApplication.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sampledata/posts.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/post/PostRepositoryInMemoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/post/PostRepositoryFileImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/post/PostViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/post/PostViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/AndroidUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/service/AndroidUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/ConvertNumberService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/service/ConvertNumberService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/views/RecyclerView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/NewPostActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/views/NewPostView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/adapter/PostViewHolder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/adapter/PostViewHolder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/post/PostRepositoryFileImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/post/PostRepositoryFileImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/recycler_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_new_post.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/new_post.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/card_post.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/card_post.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_2_API_30]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -158,14 +168,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Interface" />
-        <option value="Kotlin Object" />
         <option value="valueResourceFile" />
         <option value="Class" />
-        <option value="layoutResourceFile" />
         <option value="resourceFile" />
         <option value="Kotlin Enum" />
         <option value="Kotlin Data Class" />
+        <option value="layoutResourceFile" />
+        <option value="navigationResourceFile" />
         <option value="Kotlin Class" />
+        <option value="Kotlin Object" />
       </list>
     </option>
   </component>
@@ -185,16 +196,30 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-01-01T14:08:24.208Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="memory.settings" />
+    <property name="settings.editor.selected.configurable" value="emulator" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.myfirstapplication.service.Arg" />
+      <recent name="com.example.myfirstapplication.views" />
+      <recent name="com.example.myfirstapplication.activity" />
+      <recent name="com.example.myfirstapplication.service" />
       <recent name="com.example.myfirstapplication" />
-      <recent name="com.example.myfirstapplication.Post" />
-      <recent name="com.example.myfirstapplication.Adapter" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Things\IT\Kotlin\app\src\main\res" />
+      <recent name="E:\Things\IT\Kotlin\app\src\main\res\layout" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.example.myfirstapplication.service" />
+      <recent name="com.example.myfirstapplication" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Things\IT\Kotlin\app\src\main\java\com\example\myfirstapplication" />
@@ -209,10 +234,67 @@
       <command value="gradlew clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Android App.MainActivity">
+  <component name="RunManager" selected="Android App.AppActivity">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppActivity" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="MyFirstApplication.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="specific_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="com.example.myfirstapplication.views.AppActivity" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
@@ -268,6 +350,63 @@
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="com.example.myfirstapplication.MainActivity" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainActivity" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="MyFirstApplication.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="specific_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="com.example.myfirstapplication.activity.MainActivity" />
       <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
       <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <method v="2">
@@ -369,25 +508,6 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Kotlin:app [installDebugAndroidTest]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="installDebugAndroidTest" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="Kotlin:app [installDebug]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -407,13 +527,21 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Android App.app" />
+      <item itemvalue="Android App.MainActivity" />
+      <item itemvalue="Gradle.Kotlin:app [build]" />
+      <item itemvalue="Gradle.Kotlin:app [clean]" />
+      <item itemvalue="Gradle.Kotlin:app [installDebug]" />
+      <item itemvalue="Android App.AppActivity" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Android App.AppActivity" />
+        <item itemvalue="Android App.MainActivity" />
         <item itemvalue="Android App.MainActivity" />
         <item itemvalue="Gradle.Kotlin:app [clean]" />
         <item itemvalue="Gradle.Kotlin:app [build]" />
-        <item itemvalue="Gradle.Kotlin:app [installDebug]" />
-        <item itemvalue="Gradle.Kotlin:app [installDebugAndroidTest]" />
       </list>
     </recent_temporary>
   </component>
@@ -443,22 +571,26 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="477" y="271" key="#PSD" timestamp="1610951924663">
+    <state x="477" y="271" key="#PSD" timestamp="1610982469824">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="477" y="271" key="#PSD/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610951924663" />
+    <state x="477" y="271" key="#PSD/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610982469824" />
+    <state x="414" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611166394359">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="414" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1611166394359" />
     <state x="751" y="240" key="#com.intellij.ide.util.MemberChooser" timestamp="1610397383932">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="751" y="240" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610397383932" />
-    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610372761219">
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1611163266266">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610372761219" />
-    <state x="725" y="316" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1610380978907">
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1611163266266" />
+    <state x="725" y="316" width="657" height="418" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1611245289795">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="725" y="316" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610380978907" />
+    <state x="725" y="316" width="657" height="418" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1611245289795" />
     <state x="92" y="92" width="1736" height="866" key="AVDManager" timestamp="1610573514295">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -468,10 +600,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="540" y="279" key="AndroidCreateResourceDirectoryDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1609340836450" />
-    <state x="540" y="279" key="AndroidCreateResourceFileDialog" timestamp="1610374418526">
+    <state x="540" y="279" key="AndroidCreateResourceFileDialog" timestamp="1611170870405">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="540" y="279" key="AndroidCreateResourceFileDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610374418526" />
+    <state x="540" y="279" key="AndroidCreateResourceFileDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1611170870405" />
     <state x="804" y="310" key="AndroidCreateXmlResourceDialog" timestamp="1610398256133">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -480,29 +612,29 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="758" y="271" key="AndroidProcessChooserDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1606690806869" />
-    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1610374218202">
+    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1611163209692">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610374218202" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1610975274685">
+    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1611163209692" />
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1611255708293">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610975274685" />
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1611255708293" />
     <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1609973903104" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1610975274685">
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1611255708292">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610975274685" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1611255708292" />
     <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1609973903104" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1610975274685">
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1611255708292">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610975274685" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1611255708292" />
     <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1609973903104" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1610975274685">
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1611255708292">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610975274685" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1611255708292" />
     <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1609973903104" />
     <state width="1877" height="344" key="GridCell.Tab.1.bottom" timestamp="1606691414119">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -524,10 +656,14 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="733" y="227" key="RollbackChangesDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1609840165989" />
-    <state x="1920" y="0" width="1526" height="1037" maximized="true" key="dock-window-1" timestamp="1610951707280">
+    <state x="141" y="121" key="SettingsEditor" timestamp="1611171281741">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="141" y="121" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1611171281741" />
+    <state x="1920" y="0" width="1527" height="1037" maximized="true" key="dock-window-1" timestamp="1611162627846">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state x="1920" y="0" width="1526" height="1037" maximized="true" key="dock-window-1/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610951707280" />
+    <state x="1920" y="0" width="1527" height="1037" maximized="true" key="dock-window-1/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1611162627846" />
     <state x="2016" y="0" width="1562" height="1037" maximized="true" key="dock-window-2" timestamp="1610398965217">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
@@ -536,9 +672,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" width="672" height="677" key="run.anything.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610012606639" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1610974963776">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1611205432803">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1610974963776" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1611205432803" />
   </component>
 </project>

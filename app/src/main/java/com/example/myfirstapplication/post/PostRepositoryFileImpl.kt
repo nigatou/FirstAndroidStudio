@@ -1,13 +1,10 @@
 package com.example.myfirstapplication.post
 
 import android.content.Context
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import java.io.File
-import java.io.FileInputStream
 
 class PostRepositoryFileImpl(
         private val context: Context

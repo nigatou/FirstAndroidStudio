@@ -1,0 +1,12 @@
+{
+  "data": {
+    "id": 0,
+    "content": "",
+    "likes": 0,
+    "shares": 0,
+    "likedByMe": false,
+    "sharedByMe": false,
+    "views": 0,
+    "video": ""
+  }
+}

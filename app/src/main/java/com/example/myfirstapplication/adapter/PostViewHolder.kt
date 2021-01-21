@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myfirstapplication.*
 import com.example.myfirstapplication.databinding.CardPostBinding
 import com.example.myfirstapplication.post.Post
+import com.example.myfirstapplication.service.ConvertNumberService
 
 class PostViewHolder(
         private val binding: CardPostBinding,

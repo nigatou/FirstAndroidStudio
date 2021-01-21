@@ -46,6 +46,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation "androidx.activity:activity-ktx:1.1.0"
     implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -54,6 +55,8 @@ dependencies {
     def arch_version = "2.1.0"
     def mdc_version = "1.2.1"
     def gson_version = "2.8.6"
+    def ktx_version = "1.2.5"
+    def nav_version = "2.3.2"
     // ViewModel
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     // LiveData
@@ -67,4 +70,9 @@ dependencies {
     implementation "com.google.android.material:material:$mdc_version"
 
     implementation "com.google.code.gson:gson:$gson_version"
+
+    implementation "androidx.fragment:fragment-ktx:$ktx_version"
+
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 }
