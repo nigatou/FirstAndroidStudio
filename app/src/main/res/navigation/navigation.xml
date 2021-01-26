@@ -3,32 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/recyclerView">
+    app:startDestination="@id/feedFragment">
 
     <fragment
-        android:id="@+id/recyclerView"
-        android:name="com.example.myfirstapplication.views.RecyclerView"
-        android:label="recycler_view"
-        tools:layout="@layout/recycler_view">
+        android:id="@+id/feedFragment"
+        android:name="com.example.myfirstapplication.fragments.FeedFragment"
+        android:label="feed_fragment"
+        tools:layout="@layout/feed_fragment" >
         <action
-            android:id="@+id/action_recyclerView_to_postView"
-            app:destination="@id/postView" />
+            android:id="@+id/action_feedFragment_to_cardPostFragment"
+            app:destination="@id/cardPostFragment" />
         <action
-            android:id="@+id/action_recyclerView_to_newPostView"
-            app:destination="@id/newPostView" />
+            android:id="@+id/action_feedFragment_to_newPostFragment"
+            app:destination="@id/newPostFragment" />
     </fragment>
     <fragment
-        android:id="@+id/newPostView"
-        android:name="com.example.myfirstapplication.views.NewPostView"
-        android:label="new_post"
-        tools:layout="@layout/new_post" />
-    <fragment
-        android:id="@+id/postView"
-        android:name="com.example.myfirstapplication.views.PostView"
-        android:label="card_post"
-        tools:layout="@layout/card_post">
+        android:id="@+id/cardPostFragment"
+        android:name="com.example.myfirstapplication.fragments.CardPostFragment"
+        android:label="card_post_fragment"
+        tools:layout="@layout/card_post_fragment" >
         <action
-            android:id="@+id/action_postView_to_newPostView"
-            app:destination="@id/newPostView" />
+            android:id="@+id/action_cardPostFragment_to_newPostFragment"
+            app:destination="@id/newPostFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/newPostFragment"
+        android:name="com.example.myfirstapplication.fragments.NewPostFragment"
+        android:label="new_post_fragment"
+        tools:layout="@layout/new_post_fragment" />
 </navigation>

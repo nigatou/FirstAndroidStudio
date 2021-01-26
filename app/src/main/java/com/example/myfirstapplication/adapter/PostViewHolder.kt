@@ -4,12 +4,12 @@ import android.view.View
 import android.widget.PopupMenu
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myfirstapplication.*
-import com.example.myfirstapplication.databinding.CardPostBinding
+import com.example.myfirstapplication.databinding.CardPostFragmentBinding
 import com.example.myfirstapplication.post.Post
 import com.example.myfirstapplication.service.ConvertNumberService
 
 class PostViewHolder(
-        private val binding: CardPostBinding,
+        private val binding: CardPostFragmentBinding,
         private val onInteractionListener: OnInteractionListener
 ) : RecyclerView.ViewHolder(binding.root) {
     fun bind(post: Post) {
@@ -29,6 +29,10 @@ class PostViewHolder(
                 playVideo.setOnClickListener {
                     onInteractionListener.onPlayVideo(post)
                 }
+            }
+
+            content.setOnClickListener{
+                onInteractionListener.onView(post)
             }
 
             like.setOnClickListener{

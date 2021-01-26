@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFirstApplication">
 
-        <activity android:name=".views.AppActivity">
+        <activity android:name=".activity.AppActivity">
             <nav-graph android:value="@navigation/navigation"/>
             <intent-filter>
                 <action android:name="android.intent.action.SEND"/>

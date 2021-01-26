@@ -64,6 +64,10 @@ class PostRepositoryFileImpl(
         sync()
     }
 
+    override fun view(post: Post) {
+        sync()
+    }
+
     override fun removeById(id: Long) {
         posts = posts.filter { it.id != id }
         data.value = posts

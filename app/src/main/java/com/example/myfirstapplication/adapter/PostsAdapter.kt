@@ -4,13 +4,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import com.example.myfirstapplication.post.Post
-import com.example.myfirstapplication.databinding.CardPostBinding
+import com.example.myfirstapplication.databinding.CardPostFragmentBinding
 
 class PostsAdapter(
         private val onInteractionListener: OnInteractionListener
 ) : ListAdapter<Post, PostViewHolder>(PostDiffCallback()) {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
-            val binding = CardPostBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            val binding = CardPostFragmentBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             return PostViewHolder(binding, onInteractionListener)
         }
 

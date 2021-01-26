@@ -24,6 +24,7 @@ class PostViewModel(application: Application) : AndroidViewModel(application) {
     fun shareById(id: Long) = repository.shareById(id)
     fun removeById(id: Long) = repository.removeById(id)
     fun playVideo(post: Post) = repository.playVideo(post)
+    fun view(post: Post) = repository.view(post)
 
     fun save() {
         edited.value?.let {
@@ -34,6 +35,10 @@ class PostViewModel(application: Application) : AndroidViewModel(application) {
 
     fun edit(post: Post) {
         edited.value = post
+    }
+
+    fun getPost(): Post? {
+        return edited.value
     }
 
     fun changeContent(content: String, video: String) {

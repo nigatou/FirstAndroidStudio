@@ -8,5 +8,6 @@ interface PostRepository {
     fun shareById(id: Long)
     fun removeById(id: Long)
     fun playVideo(post: Post)
+    fun view(post: Post)
     fun save(post: Post)
 }
