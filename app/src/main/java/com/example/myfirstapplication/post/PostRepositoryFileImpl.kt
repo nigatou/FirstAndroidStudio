@@ -36,32 +36,39 @@ class PostRepositoryFileImpl(
 
     override fun getAll(): LiveData<List<Post>> = data
 
-    override fun likeById(id: Long) {
+    override fun likeById(id: Long): Int {
+        var likesOfThePost = 0
         posts = posts.map {
             when {
                 it.id != id -> it
                 it.likedByMe -> {
+                    likesOfThePost = it.likes - 1
                     it.copy(likes = it.likes - 1, likedByMe = false)
                 }
                 else -> {
+                    likesOfThePost = it.likes + 1
                     it.copy(likes = it.likes + 1, likedByMe = true)
                 }
             }
         }
         data.value = posts
         sync()
+        return likesOfThePost
     }
 
-    override fun shareById(id: Long) {
+    override fun shareById(id: Long): Int {
+        var sharesOfThePost = 0
         posts = posts.map {
             if (it.id != id) {
                 it
             } else {
+                sharesOfThePost = it.shares + 1
                 it.copy(shares = it.shares + 1, sharedByMe = true)
             }
         }
         data.value = posts
         sync()
+        return sharesOfThePost
     }
 
     override fun view(post: Post) {

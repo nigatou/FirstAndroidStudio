@@ -65,7 +65,17 @@ class FeedFragment : Fragment(R.layout.feed_fragment) {
             }
 
             override fun onView(post: Post) {
-                findNavController().navigate(R.id.action_feedFragment_to_cardPostFragment)
+                val bundle = Bundle().apply {
+                    putLong("postId", post.id)
+                    putString("postContent", post.content)
+                    putInt("postLikes", post.likes)
+                    putInt("postShares", post.shares)
+                    putBoolean("postLikedByMe", post.likedByMe)
+                    putBoolean("postSharedByMe", post.sharedByMe)
+                    putInt("postViews", post.views)
+                    putString("postVideo", post.video)
+                }
+                findNavController().navigate(R.id.action_feedFragment_to_cardPostFragment, bundle)
             }
         })
 

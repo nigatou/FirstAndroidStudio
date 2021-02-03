@@ -35,6 +35,14 @@ class PostViewHolder(
                 onInteractionListener.onView(post)
             }
 
+            contentVideo.setOnClickListener{
+                onInteractionListener.onView(post)
+            }
+
+            contentLink.setOnClickListener{
+                onInteractionListener.onView(post)
+            }
+
             like.setOnClickListener{
                 onInteractionListener.onLike(post)
             }

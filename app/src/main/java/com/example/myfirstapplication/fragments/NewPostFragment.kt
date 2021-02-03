@@ -56,7 +56,7 @@ class NewPostFragment : Fragment(R.layout.new_post_fragment) {
             }
 
             fab.setOnClickListener {
-                viewModel.changeContent(contentLink.toString(), contentVideo.toString())
+                viewModel.changeContent(content.text.toString(), link.text.toString())
                 viewModel.save()
                 AndroidUtils.hideKeyboard(view)
                 findNavController().navigateUp()
