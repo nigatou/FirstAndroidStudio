@@ -3,6 +3,7 @@ package com.example.myfirstapplication.post
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import com.example.myfirstapplication.db.AppDb
 
 private val empty = Post(
         id=0L,
@@ -16,7 +17,9 @@ private val empty = Post(
 )
 
 class PostViewModel(application: Application) : AndroidViewModel(application) {
-    private val repository: PostRepository = PostRepositoryFileImpl(application)
+    private val repository: PostRepository = PostRepositorySQLiteImpl(
+        AppDb.getInstance(application).postDao
+    )
     val data = repository.getAll()
     private val edited = MutableLiveData(empty)
 
