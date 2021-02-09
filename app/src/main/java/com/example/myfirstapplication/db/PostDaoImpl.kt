@@ -6,7 +6,21 @@ import android.database.sqlite.SQLiteDatabase
 import com.example.myfirstapplication.post.Post
 
 class PostDaoImpl(private val db: SQLiteDatabase) : PostDao {
-    companion object {}
+    companion object {
+        val DDL =
+            """
+                CREATE TABLE ${PostColumns.TABLE} (
+                    ${PostColumns.COLUMN_ID} INTEGER PRIMARY KEY AUTOINCREMENT,
+                    ${PostColumns.COLUMN_CONTENT} TEXT NOT NULL,
+                    ${PostColumns.COLUMN_LIKES} INTEGER NOT NULL DEFAULT 0,
+                    ${PostColumns.COLUMN_SHARES} INTEGER NOT NULL DEFAULT 0,
+                    ${PostColumns.COLUMN_LIKED_BY_ME} BOOLEAN NOT NULL DEFAULT 0,
+                    ${PostColumns.COLUMN_SHARED_BY_ME} BOOLEAN NOT NULL DEFAULT 0,
+                    ${PostColumns.COLUMN_VIEWS} INTEGER NOT NULL DEFAULT 0,
+                    ${PostColumns.COLUMN_VIDEO} TEXT NOT NULL DEFAULT ""
+                );
+            """.trimIndent()
+    }
 
     object PostColumns {
         const val TABLE = "posts"
@@ -39,7 +53,7 @@ class PostDaoImpl(private val db: SQLiteDatabase) : PostDao {
             null,
             null,
             null,
-            "${PostColumns.ALL_COLUMNS} DESC"
+            "${PostColumns.COLUMN_ID} DESC"
         ).use {
             while (it.moveToNext()) {
                 posts.add(map(it))
@@ -76,7 +90,7 @@ class PostDaoImpl(private val db: SQLiteDatabase) : PostDao {
             """
             UPDATE posts SET
                 likes = likes + CASE WHEN likedByMe THEN -1 ELSE 1 END,
-                likedByMe = CASE WHEN likedByMe THEN 0 ELSE END
+                likedByMe = CASE WHEN likedByMe THEN 0 ELSE 1 END
             WHERE id = ?;    
             """.trimIndent(), arrayOf(id)
         )
@@ -87,7 +101,7 @@ class PostDaoImpl(private val db: SQLiteDatabase) : PostDao {
             """
             UPDATE posts SET
                 shares = shares + 1 END,
-                likedByMe = 1 END
+                sharedByMe = 1 END
             WHERE id = ?;    
             """.trimIndent(), arrayOf(id)
         )
