@@ -18,18 +18,20 @@ class PostRepositorySQLiteImpl(
     override fun getAll(): LiveData<List<Post>> = data
 
     override fun likeById(id: Long): Int {
-        var likesOfThePost = 0
+        val likesOfThePost = 0
         posts = posts.map {
-            when {
-                it.id != id -> it
-                it.likedByMe -> {
-                    likesOfThePost = it.likes - 1
-                    it.copy(likes = it.likes - 1, likedByMe = false)
-                }
-                else -> {
-                    likesOfThePost = it.likes + 1
-                    it.copy(likes = it.likes + 1, likedByMe = true)
-                }
+            if (it.id != id) {
+                it
+            } else {
+                dao.likeById(it.id)
+                it.copy(
+                        likedByMe = !it.likedByMe,
+                        likes = if (it.likedByMe) {
+                            it.likes - 1
+                        } else {
+                            it.likes + 1
+                        }
+                )
             }
         }
         data.value = posts
@@ -37,13 +39,18 @@ class PostRepositorySQLiteImpl(
     }
 
     override fun shareById(id: Long): Int {
-        var sharesOfThePost = 0
+
+        val sharesOfThePost = 0
+
         posts = posts.map {
             if (it.id != id) {
                 it
             } else {
-                sharesOfThePost = it.shares + 1
-                it.copy(shares = it.shares + 1, sharedByMe = true)
+                dao.shareById(it.id)
+                it.copy(
+                        sharedByMe = true,
+                        shares = it.shares + 1
+                )
             }
         }
         data.value = posts
@@ -53,7 +60,10 @@ class PostRepositorySQLiteImpl(
     override fun view(post: Post) {}
 
     override fun removeById(id: Long) {
-        posts = posts.filter { it.id != id }
+        dao.removeById(id)
+        posts = posts.filter {
+            it.id != id
+        }
         data.value = posts
     }
 
