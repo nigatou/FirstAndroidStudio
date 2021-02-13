@@ -1,5 +1,6 @@
 package com.example.myfirstapplication.db
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
@@ -8,7 +9,7 @@ import com.example.myfirstapplication.room.PostEntity
 @Dao
 interface PostDao {
     @Query("SELECT * FROM PostEntity ORDER BY id DESC")
-    fun getAll(): List<List<PostEntity>>
+    fun getAll(): LiveData<List<PostEntity>>
 
     @Insert
     fun insert(postEntity: PostEntity)

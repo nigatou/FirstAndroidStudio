@@ -15,4 +15,19 @@ data class PostEntity(
     val sharedByMe: Boolean,
     val views: Int = 0,
     val video: String
-)
+) {
+    companion object {
+        fun fromDto(post: Post): PostEntity {
+            return PostEntity(
+                post.id,
+                post.content,
+                post.likes,
+                post.shares,
+                post.likedByMe,
+                post.sharedByMe,
+                post.views,
+                post.video
+            )
+        }
+    }
+}

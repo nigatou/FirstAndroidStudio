@@ -6,19 +6,19 @@ import androidx.lifecycle.MutableLiveData
 import com.example.myfirstapplication.db.AppDb
 
 private val empty = Post(
-        id = 0L,
-        content = "",
-        likes = 0,
-        shares = 0,
-        sharedByMe = false,
-        likedByMe = false,
-        views = 0,
-        video = ""
+    id = 0L,
+    content = "",
+    likes = 0,
+    shares = 0,
+    sharedByMe = false,
+    likedByMe = false,
+    views = 0,
+    video = ""
 )
 
 class PostViewModel(application: Application) : AndroidViewModel(application) {
     private val repository: PostRepository = PostRepositoryImpl(
-            AppDb.getInstance(context = application).postDao()
+        AppDb.getInstance(context = application).postDao()
     )
     val data = repository.getAll()
     private val edited = MutableLiveData(empty)
