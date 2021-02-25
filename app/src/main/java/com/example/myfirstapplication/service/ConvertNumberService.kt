@@ -4,7 +4,7 @@ object ConvertNumberService {
     fun convertNumber(num: Int): String? {
         val number = num.toString()
         when (num) {
-            in 1..999 -> {
+            in 0..999 -> {
                 return number
             }
             in 1000..1099 -> {
