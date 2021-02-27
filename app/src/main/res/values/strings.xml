@@ -28,5 +28,8 @@
     <string name="addpost">addPost</string>
     <string name="playvideo">playVideo</string>
     <string name="video_link">Video Link</string>
+    <string name="notification_user_liked">%1$s liked %2$s post</string>
+    <string name="channel_remote_name">Channel remote name</string>
+    <string name="channel_remote_description">Channel remote description</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

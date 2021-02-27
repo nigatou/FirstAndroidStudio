@@ -1,0 +1,4 @@
+package com.example.myfirstapplication.addons
+
+const val dbUrl = "firebase-adminsdk-t0l7d@myfirstapplication-74056.iam.gserviceaccount.com"
+const val token = "dnmJz00JTMOesA78_fHAQJ:APA91bE4ugynNG82kEXlDBu8BqaR9JZh4mo4u_w6XwCM97BRJbZAjey33SG5L7gedpGTrpCYeis6wBeP-QTYgj7jRXY5GJoeKlfqBJW8DK55XRo7PeOs8sWtlBGjRi7d1GMPBioqn6Yp"

@@ -29,4 +29,5 @@
     <string name="addpost">addPost</string>
     <string name="playvideo">playVideo</string>
     <string name="video_link">Ссылка Видео</string>
+    <string name="notification_user_liked">%1$s поставил лайк посту %2$s</string>
 </resources>
