@@ -2,11 +2,13 @@ package com.example.myfirstapplication.post
 
 data class Post(
         val id: Long,
+        val author: String,
         val content: String,
-        val likes: Int,
-        val shares: Int,
+        val published: String,
+        val likes: Int = 0,
+        val shares: Int = 0,
         val likedByMe: Boolean,
         val sharedByMe: Boolean,
-        val views: Int,
+        val views: Int = 0,
         val video: String
 )

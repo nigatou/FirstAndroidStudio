@@ -31,7 +31,9 @@ class CardPostFragment : Fragment(R.layout.card_post_fragment) {
 
         binding.apply {
             val postId = arguments?.getLong("postId")
+            val postAuthor = arguments?.getString("postAuthor")
             val postContent = arguments?.getString("postContent")
+            val postPublished = arguments?.getString("postPublished")
             val postLikes = arguments?.getInt("postLikes")
             val postShares = arguments?.getInt("postShares")
             val postLikedByMe = arguments?.getBoolean("postLikedByMe")
@@ -41,7 +43,9 @@ class CardPostFragment : Fragment(R.layout.card_post_fragment) {
 
             val post = Post(
                     id = postId!!,
+                    author = postAuthor!!,
                     content = postContent!!,
+                    published = postPublished!!,
                     likes = postLikes!!,
                     shares = postShares!!,
                     likedByMe = postLikedByMe!!,
@@ -50,7 +54,9 @@ class CardPostFragment : Fragment(R.layout.card_post_fragment) {
                     video = postVideo!!
             )
 
+            author.text = postAuthor
             content.text = postContent
+            published.text = postPublished
             like.text = postLikes.toString()
             share.text = postShares.toString()
             like.isChecked = postLikedByMe

@@ -14,7 +14,9 @@ class PostViewHolder(
 ) : RecyclerView.ViewHolder(binding.root) {
     fun bind(post: Post) {
         binding.apply {
+            author.text = post.author
             content.text = post.content
+            published.text = post.published
             like.text = ConvertNumberService.convertNumber(post.likes)
             share.text = ConvertNumberService.convertNumber(post.shares)
             like.isChecked = post.likedByMe
@@ -31,23 +33,23 @@ class PostViewHolder(
                 }
             }
 
-            content.setOnClickListener{
+            content.setOnClickListener {
                 onInteractionListener.onView(post)
             }
 
-            contentVideo.setOnClickListener{
+            contentVideo.setOnClickListener {
                 onInteractionListener.onView(post)
             }
 
-            contentLink.setOnClickListener{
+            contentLink.setOnClickListener {
                 onInteractionListener.onView(post)
             }
 
-            like.setOnClickListener{
+            like.setOnClickListener {
                 onInteractionListener.onLike(post)
             }
 
-            share.setOnClickListener{
+            share.setOnClickListener {
                 onInteractionListener.onShare(post)
             }
 
@@ -55,7 +57,7 @@ class PostViewHolder(
                 PopupMenu(it.context, it).apply {
                     inflate(R.menu.options_menu)
                     setOnMenuItemClickListener { item ->
-                        when(item.itemId) {
+                        when (item.itemId) {
                             R.id.remove -> {
                                 onInteractionListener.onRemove(post)
                                 true

@@ -9,13 +9,13 @@ import com.example.myfirstapplication.databinding.CardPostFragmentBinding
 class PostsAdapter(
         private val onInteractionListener: OnInteractionListener
 ) : ListAdapter<Post, PostViewHolder>(PostDiffCallback()) {
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
-            val binding = CardPostFragmentBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-            return PostViewHolder(binding, onInteractionListener)
-        }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
+        val binding = CardPostFragmentBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return PostViewHolder(binding, onInteractionListener)
+    }
 
-        override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
-            val post = getItem(position)
-            holder.bind(post)
-        }
+    override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
+        val post = getItem(position)
+        holder.bind(post)
+    }
 }

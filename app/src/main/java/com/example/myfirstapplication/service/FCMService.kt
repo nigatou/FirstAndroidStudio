@@ -4,26 +4,21 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
 import android.os.Build
-import android.os.Message
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.example.myfirstapplication.R
 import com.example.myfirstapplication.addons.Action
 import com.example.myfirstapplication.addons.Like
-import com.example.myfirstapplication.addons.dbUrl
-import com.example.myfirstapplication.addons.token
-import com.google.firebase.FirebaseApp
-import com.google.firebase.FirebaseOptions
-import com.google.firebase.messaging.FirebaseMessaging
+import com.example.myfirstapplication.addons.Share
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import com.google.gson.Gson
-import java.io.FileInputStream
 import kotlin.random.Random
 
 class FCMService : FirebaseMessagingService() {
     private val action = "action"
     private val content = "content"
+    private val channelId = "remote"
     private val gson = Gson()
 
     override fun onCreate() {
@@ -44,6 +39,7 @@ class FCMService : FirebaseMessagingService() {
         message.data[action]?.let {
             when (Action.valueOf(it)) {
                 Action.LIKE -> handleLike(gson.fromJson(message.data[content], Like::class.java))
+                Action.SHARE -> handleShare(gson.fromJson(message.data[content], Share::class.java))
             }
         }
     }
@@ -52,43 +48,37 @@ class FCMService : FirebaseMessagingService() {
         println(token)
     }
 
-    fun main() {
-        val options = FirebaseOptions.builder()
-            .setCredentials(GoogleCredentials.fromStream(FileInputStream("fcm.json")))
-            .setDatabaseUrl(dbUrl)
-            .build()
-
-        FirebaseApp.initializeApp(options)
-
-        val message = Message.builder()
-            .putData("action", "LIKE")
-            .putData(
-                "content", """{
-                "userId": 1,
-                "userName": Vanya,
-                "postId": 2,
-                "postAuthor": "Netology"
-            }""".trimIndent()
-            )
-            .setToken(token)
-            .build()
-
-        FirebaseMessaging.getInstance().send(message)
-    }
-
     private fun handleLike(content: Like) {
         val notification = NotificationCompat.Builder(this, channelId)
-            .setSmallIcon(R.drawable.ic_notification)
-            .setContentTitle(
-                getString(
-                    R.string.notification_user_liked,
-                    content.userName,
-                    content.postAuthor
+                .setSmallIcon(R.drawable.ic_notification)
+                .setContentTitle(
+                        getString(
+                                R.string.notification_user_liked,
+                                content.userName,
+                                content.postAuthor
+                        )
                 )
-            )
-            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-            .build()
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .build()
 
         NotificationManagerCompat.from(this)
-            .notify(Random.nextInt(100_000), notification)
+                .notify(Random.nextInt(100_000), notification)
+    }
+
+    private fun handleShare(content: Share) {
+        val notification = NotificationCompat.Builder(this, channelId)
+                .setSmallIcon(R.drawable.ic_notification)
+                .setContentTitle(
+                        getString(
+                                R.string.notification_user_shared,
+                                content.userName,
+                                content.postAuthor
+                        )
+                )
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .build()
+
+        NotificationManagerCompat.from(this)
+                .notify(Random.nextInt(100_000), notification)
+    }
 }

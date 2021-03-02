@@ -12,8 +12,13 @@ import com.example.myfirstapplication.R
 import com.example.myfirstapplication.databinding.NewPostFragmentBinding
 import com.example.myfirstapplication.post.PostViewModel
 import com.example.myfirstapplication.service.AndroidUtils
+import com.example.myfirstapplication.service.StringArg
 
 class NewPostFragment : Fragment(R.layout.new_post_fragment) {
+
+    companion object {
+        var Bundle.textArg: String? by StringArg
+    }
 
     private val viewModel: PostViewModel by viewModels(
             ownerProducer = ::requireParentFragment
@@ -32,7 +37,9 @@ class NewPostFragment : Fragment(R.layout.new_post_fragment) {
 
         binding.apply {
             val post = viewModel.getPost()!!
+            author.text = post.author
             content.setText(post.content)
+            published.text = post.published
             link.setText(post.video)
             contentLink.text = post.video
             if (post.video != "") {

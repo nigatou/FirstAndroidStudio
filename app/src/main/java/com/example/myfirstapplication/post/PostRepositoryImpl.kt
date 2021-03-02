@@ -5,20 +5,22 @@ import com.example.myfirstapplication.db.PostDao
 import com.example.myfirstapplication.room.PostEntity
 
 class PostRepositoryImpl(
-    private val dao: PostDao
+        private val dao: PostDao
 ) : PostRepository {
 
     override fun getAll() = Transformations.map(dao.getAll()) { list ->
         list.map {
             Post(
-                it.id,
-                it.content,
-                it.likes,
-                it.shares,
-                it.likedByMe,
-                it.sharedByMe,
-                it.views,
-                it.video
+                    it.id,
+                    it.author,
+                    it.content,
+                    it.published,
+                    it.likes,
+                    it.shares,
+                    it.likedByMe,
+                    it.sharedByMe,
+                    it.views,
+                    it.video
             )
         }
     }

@@ -67,7 +67,9 @@ class FeedFragment : Fragment(R.layout.feed_fragment) {
             override fun onView(post: Post) {
                 val bundle = Bundle().apply {
                     putLong("postId", post.id)
+                    putString("postAuthor", post.author)
                     putString("postContent", post.content)
+                    putString("postPublished", post.published)
                     putInt("postLikes", post.likes)
                     putInt("postShares", post.shares)
                     putBoolean("postLikedByMe", post.likedByMe)
