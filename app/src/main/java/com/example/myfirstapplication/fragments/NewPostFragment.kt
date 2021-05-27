@@ -21,18 +21,18 @@ class NewPostFragment : Fragment(R.layout.new_post_fragment) {
     }
 
     private val viewModel: PostViewModel by viewModels(
-            ownerProducer = ::requireParentFragment
+        ownerProducer = ::requireParentFragment
     )
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View {
         val binding = NewPostFragmentBinding.inflate(
-                inflater,
-                container,
-                false
+            inflater,
+            container,
+            false
         )
 
         binding.apply {
@@ -66,6 +66,11 @@ class NewPostFragment : Fragment(R.layout.new_post_fragment) {
                 viewModel.changeContent(content.text.toString(), link.text.toString())
                 viewModel.save()
                 AndroidUtils.hideKeyboard(view)
+                findNavController().navigateUp()
+            }
+
+            viewModel.postCreated.observe(viewLifecycleOwner) {
+                viewModel.loadPosts()
                 findNavController().navigateUp()
             }
         }

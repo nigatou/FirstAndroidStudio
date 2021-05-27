@@ -28,12 +28,12 @@ class AppActivity : AppCompatActivity(R.layout.activity_app) {
 
             intent.removeExtra(Intent.EXTRA_TEXT)
             findNavController(R.id.nav_host_fragment)
-                    .navigate(
-                            R.id.action_feedFragment_to_newPostFragment,
-                            Bundle().apply {
-                                textArg = text
-                            }
-                    )
+                .navigate(
+                    R.id.action_feedFragment_to_newPostFragment,
+                    Bundle().apply {
+                        textArg = text
+                    }
+                )
         }
 
         checkGoogleApiAvailability()
@@ -50,7 +50,7 @@ class AppActivity : AppCompatActivity(R.layout.activity_app) {
                 return
             }
             Toast.makeText(this@AppActivity, R.string.google_play_unavailable, Toast.LENGTH_LONG)
-                    .show()
+                .show()
         }
 
         FirebaseInstanceId.getInstance().instanceId.addOnSuccessListener {

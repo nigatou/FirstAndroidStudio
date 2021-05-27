@@ -31,15 +31,20 @@ class CardPostFragment : Fragment(R.layout.card_post_fragment) {
 
         binding.apply {
             val postId = arguments?.getLong("postId")
-            val postAuthor = arguments?.getString("postAuthor")
+            var postAuthor = arguments?.getString("postAuthor")
             val postContent = arguments?.getString("postContent")
-            val postPublished = arguments?.getString("postPublished")
+            var postPublished = arguments?.getString("postPublished")
             val postLikes = arguments?.getInt("postLikes")
             val postShares = arguments?.getInt("postShares")
             val postLikedByMe = arguments?.getBoolean("postLikedByMe")
             val postSharedByMe = arguments?.getBoolean("postSharedByMe")
             val postViews = arguments?.getInt("postViews")
             val postVideo = arguments?.getString("postVideo")
+
+            if (postAuthor == "") {
+                postAuthor = "Нетология. Университет интернет-профессий будущего"
+                postPublished = "21 мая в 18:36"
+            }
 
             val post = Post(
                     id = postId!!,
