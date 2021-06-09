@@ -44,7 +44,19 @@ class PostRepositoryImpl : PostRepository {
             .close()
     }
 
+    override fun dislikeById(id: Long) {
+        val request: Request = Request.Builder()
+            .delete(gson.toJson(id).toRequestBody(jsonType))
+            .url("${BASE_URL}/api/slow/posts/$id/likes")
+            .build()
+
+        return client.newCall(request)
+            .execute()
+            .close()
+    }
+
     override fun shareById(id: Long) {
+        // TODO: do this in homework
     }
 
     override fun removeById(id: Long) {

@@ -80,7 +80,11 @@ class CardPostFragment : Fragment(R.layout.card_post_fragment) {
             }
 
             like.setOnClickListener {
-                like.text = viewModel.likeById(postId).toString()
+                if (like.isChecked) {
+                    like.text = viewModel.dislikeById(postId).toString()
+                } else {
+                    like.text = viewModel.likeById(postId).toString()
+                }
             }
 
             share.setOnClickListener {
