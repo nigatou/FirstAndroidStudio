@@ -17,34 +17,31 @@ Content-Type: application/json
 {
   "id": 0,
   "author": "Netology",
-  "content": "First Post",
+  "authorAvatar": "netology.jpg",
+  "content": "New Post",
   "published": 0,
-  "likes": 0,
-  "shares": 0,
   "likedByMe": false,
-  "sharedByMe": false,
-  "views": 0,
-  "video": ""
+  "likes": 0
 }
 
 > {%
 client.test("Request executed successfully", function() {
   client.assert(response.status === 200, "Response status is not 200");
   client.assert(response.contentType.mimeType === "application/json", "Expected 'application/json' but received '" + response.contentType.mimeType + "'");
-  client.assert(response.body.id === 1, "Generated id not 1");
+  client.assert(response.body.id === 4, "Generated id not 4");
 });
 %}
 
 ### Получение сообщения по id
 
-GET http://localhost:9999/api/posts/1
+GET http://localhost:9999/api/posts/4
 
 > {%
 client.test("Request executed successfully", function() {
   client.assert(response.status === 200, "Response status is not 200");
   client.assert(response.contentType.mimeType === "application/json", "Expected 'application/json' but received '" + response.contentType.mimeType + "'");
-  client.assert(response.body.id === 1, "id not 1");
-  client.assert(response.body.content === "First Post", "id not 1");
+  client.assert(response.body.id === 4, "id not 4");
+  client.assert(response.body.content === "New Post", "Invalid content");
 });
 %}
 
@@ -54,30 +51,76 @@ POST http://localhost:9999/api/posts
 Content-Type: application/json
 
 {
-  "id": 1,
+  "id": 4,
   "author": "Netology",
-  "content": "First Post (UPDATED)",
+  "authorAvatar": "netology.jpg",
+  "content": "New Post (UPDATED)",
   "published": 0,
-  "likes": 0,
-  "shares": 0,
   "likedByMe": false,
-  "sharedByMe": false,
-  "views": 0,
-  "video": ""
+  "likes": 0
 }
 
 > {%
 client.test("Request executed successfully", function() {
   client.assert(response.status === 200, "Response status is not 200");
   client.assert(response.contentType.mimeType === "application/json", "Expected 'application/json' but received '" + response.contentType.mimeType + "'");
-  client.assert(response.body.id === 1, "Id changed");
-  client.assert(response.body.content === "First Post (UPDATED)", "Content not updated");
+  client.assert(response.body.id === 4, "Id changed");
+  client.assert(response.body.content === "New Post (UPDATED)", "Content not updated");
+});
+%}
+
+### Like сообщения
+
+POST http://localhost:9999/api/posts/4/likes
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+});
+%}
+
+### Получение сообщения по id
+
+GET http://localhost:9999/api/posts/4
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+  client.assert(response.contentType.mimeType === "application/json", "Expected 'application/json' but received '" + response.contentType.mimeType + "'");
+  client.assert(response.body.id === 4, "id not 4");
+  client.assert(response.body.likes === 1, "likes not incremented");
+  client.assert(response.body.likedByMe === true, "likedByMe didn't changed");
+});
+%}
+
+
+### Дизлайк сообщения
+
+DELETE http://localhost:9999/api/posts/4/likes
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+});
+%}
+
+### Получение сообщения по id
+
+GET http://localhost:9999/api/posts/4
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+  client.assert(response.contentType.mimeType === "application/json", "Expected 'application/json' but received '" + response.contentType.mimeType + "'");
+  client.assert(response.body.id === 4, "id not 4");
+  client.assert(response.body.likes === 0, "likes decremented");
+  client.assert(response.body.likedByMe === false, "likedByMe didn't changed");
 });
 %}
 
 ### Удаление сообщения по id
 
-DELETE http://localhost:9999/api/posts/1
+DELETE http://localhost:9999/api/posts/4
 
 > {%
 client.test("Request executed successfully", function() {
@@ -87,11 +130,22 @@ client.test("Request executed successfully", function() {
 
 ### Получение несуществующего сообщения
 
-GET http://localhost:9999/api/posts/1
+GET http://localhost:9999/api/posts/4
 
 > {%
 client.test("Request executed successfully", function() {
   client.assert(response.status === 404, "Response status is not 404");
+});
+%}
+
+### Получение аватарки
+
+GET http://localhost:9999/avatars/sber.jpg
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+  client.assert(response.contentType.mimeType === 'image/jpeg', "Invalid mime type");
 });
 %}
 

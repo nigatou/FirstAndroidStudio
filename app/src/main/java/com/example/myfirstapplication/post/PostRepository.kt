@@ -9,4 +9,11 @@ interface PostRepository {
     fun playVideo(post: Post)
     fun view(post: Post)
     fun save(post: Post)
+
+    fun getAllAsync(callback: GetAllCallback)
+
+    interface GetAllCallback {
+        fun onSuccess(posts: List<Post>) {}
+        fun onError(e: Exception) {}
+    }
 }

@@ -8,32 +8,17 @@ import javax.persistence.GenerationType
 
 @Entity
 data class PostEntity(
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) val id: Long,
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) var id: Long,
     var author: String,
+    var authorAvatar: String,
     var content: String,
-    var published: String,
-    var likes: Int = 0,
-    var shares: Int = 0,
+    var published: Long,
     var likedByMe: Boolean,
-    var sharedByMe: Boolean,
-    var views: Int = 0,
-    val video: String
+    var likes: Int = 0,
 ) {
-    fun toDto() =
-        Post(id, author, content, published, likes, shares, likedByMe, sharedByMe, views, video)
+    fun toDto() = Post(id, author, authorAvatar, content, published, likedByMe, likes)
 
     companion object {
-        fun fromDto(dto: Post) = PostEntity(
-            dto.id,
-            dto.author,
-            dto.content,
-            dto.published,
-            dto.likes,
-            dto.shares,
-            dto.likedByMe,
-            dto.sharedByMe,
-            dto.views,
-            dto.video
-        )
+        fun fromDto(dto: Post) = PostEntity(dto.id, dto.author, dto.authorAvatar, dto.content, dto.published, dto.likedByMe, dto.likes)
     }
 }
